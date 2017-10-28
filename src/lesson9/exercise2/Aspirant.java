@@ -19,11 +19,20 @@ public class Aspirant extends Student {
         this.academicPaper = academicPaper;
     }
 
+    public int getScholarship() {
+        return 300;
+    }
+
     public static void main(String[] args) {
-        Student first1 = new Student("Мария", "Иванова", "423");
-        Student second2 = new Student("Екатерина", "Синичкина", "423");
-        Aspirant first = new Aspirant("Иван", "Иванов", "2", "Анализ существующих информационно-поисковых систем");
-        System.out.println("Аспирант " + first.getFirstName() + " " + first.getLastName() + " из группы " + first.getGroup() + " представляет научную работу: " + '\u0022' + first.getAcademicPaper() + '\u0022' + ".");
-        System.out.println("Студентки " + first1.getFirstName() + " " + first1.getLastName() + " и " + second2.getFirstName() + " " + second2.getLastName() + " из группы " + second2.getGroup() + ".");
+        Student[] students = new Student[3];
+        students[0] = new Student("Мария", "Иванова", "423");
+        students[1] = new Student("Екатерина", "Синичкина", "423");
+        students[2] = new Aspirant("Иван", "Иванов", "2", "Анализ существующих информационно-поисковых систем");
+        for (Student student : students) {
+            student.getScholarship();
+        }
+        System.out.println(students[0].getFirstName() + " " + students[0].getLastName() + " получает стипендию " + students[0].getScholarship());
+        System.out.println(students[1].getFirstName() + " " + students[1].getLastName() + " получает стипендию " + students[1].getScholarship());
+        System.out.println("Аспирант " + students[2].getFirstName() + " " + students[2].getLastName() + " получает стипендию " + students[2].getScholarship());
     }
 }
