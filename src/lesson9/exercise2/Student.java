@@ -43,4 +43,8 @@ public class Student {
     public void setGroup(String group) {
         this.group = group;
     }
+
+    public int getScholarship() {
+        return 100;
+    }
 }
