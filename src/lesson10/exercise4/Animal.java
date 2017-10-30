@@ -45,5 +45,29 @@ public class Animal {
     public void sleep() {
         System.out.println("Сон");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Animal animal = (Animal) o;
+
+        if (food != null ? !food.equals(animal.food) : animal.food != null) return false;
+        return location != null ? location.equals(animal.location) : animal.location == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = food != null ? food.hashCode() : 0;
+        result = 31 * result + (location != null ? location.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return " Предпочтительная еда: " + food +
+                ", обитает " + location + ".";
+    }
 }
 
