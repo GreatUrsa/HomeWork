@@ -1,7 +1,7 @@
 package lesson10.exercise5;
 
 public class Apricot extends Fruit {
-    static final int APRICOTPRICE = 25;
+    public static final int APRICOT_PRICE = 25;
 
     public Apricot(double weight) {
         super(weight);
@@ -9,6 +9,6 @@ public class Apricot extends Fruit {
 
     @Override
     public double price() {
-        return getWeight() * APRICOTPRICE;
+        return getWeight() * APRICOT_PRICE;
     }
 }

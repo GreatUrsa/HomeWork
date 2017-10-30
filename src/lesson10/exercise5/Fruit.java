@@ -24,7 +24,7 @@ abstract public class Fruit {
         this.weight = weight;
     }
 
-    final void printManufacturerInfo() {
+    public final void printManufacturerInfo() {
         System.out.print("Made in Ukraine");
     }
 

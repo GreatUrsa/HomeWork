@@ -1,7 +1,7 @@
 package lesson10.exercise5;
 
 public class Apple extends Fruit {
-    static final int APPLEPRICE = 26;
+    public static final int APPLE_PRICE = 26;
 
     public Apple(double weight) {
         super(weight);
@@ -9,6 +9,11 @@ public class Apple extends Fruit {
 
     @Override
     public double price() {
-        return getWeight() * APPLEPRICE;
+        return getWeight() * APPLE_PRICE;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple{} " + super.toString();
     }
 }
