@@ -40,5 +40,6 @@ public class FruitSale {
             }
         }
         System.out.println("Общая стоимость груш - " + pearPrice);
+        fruits[6].printManufacturerInfo();
     }
 }
