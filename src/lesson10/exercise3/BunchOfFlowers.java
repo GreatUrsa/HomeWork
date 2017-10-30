@@ -13,8 +13,8 @@ public class BunchOfFlowers {
         posy1[3] = new Rose("Голландия", 6);
         posy1[4] = new Rose("Голландия", 6);
 
-        for (Flower fl1 : posy1) {
-            posyPrice1 += fl1.price();
+        for (Flower flower1 : posy1) {
+            posyPrice1 += flower1.price();
         }
         System.out.println("Цена первого букета - " + posyPrice1);
 
@@ -23,8 +23,8 @@ public class BunchOfFlowers {
         posy2[1] = new Rose("Голландия", 6);
         posy2[2] = new Rose("Голландия", 6);
 
-        for (Flower fl2 : posy2) {
-            posyPrice2 += fl2.price();
+        for (Flower flower2 : posy2) {
+            posyPrice2 += flower2.price();
         }
         System.out.println("Цена второго букета - " + posyPrice2);
 
@@ -37,8 +37,8 @@ public class BunchOfFlowers {
         posy3[5] = new Carnation("Нидерланды", 5);
         posy3[6] = new Carnation("Нидерланды", 5);
 
-        for (Flower fl3 : posy3) {
-            posyPrice3 += fl3.price();
+        for (Flower flower3 : posy3) {
+            posyPrice3 += flower3.price();
         }
         System.out.println("Цена третьего букета - " + posyPrice3);
 

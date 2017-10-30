@@ -19,9 +19,59 @@ abstract public class Flower {
         count++;
     }
 
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Flower.count = count;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public int getShelfLife() {
+        return shelfLife;
+    }
+
+    public void setShelfLife(int shelfLife) {
+        this.shelfLife = shelfLife;
+    }
+
     abstract public int price();
 
     public static int getCountFlowers() {
         return count;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Flower)) return false;
+
+        Flower flower = (Flower) o;
+
+        if (getShelfLife() != flower.getShelfLife()) return false;
+        return getManufacturer() != null ? getManufacturer().equals(flower.getManufacturer()) : flower.getManufacturer() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getManufacturer() != null ? getManufacturer().hashCode() : 0;
+        result = 31 * result + getShelfLife();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", shelfLife=" + shelfLife +
+                '}';
     }
 }
