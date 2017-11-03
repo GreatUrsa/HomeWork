@@ -46,9 +46,10 @@ public class Rectangle extends Shape {
         this.y2 = y2;
     }
 
+
     @Override
     public void draw() {
-        System.out.println("Я рисую " + color + " прямоугольник.");
+        System.out.println("Я рисую " + getColor() + " прямоугольник.");
     }
 
     @Override

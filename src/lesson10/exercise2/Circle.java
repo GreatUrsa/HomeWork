@@ -38,7 +38,7 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Я рисую " + color + " круг.");
+        System.out.println("Я рисую " + getColor() + " круг.");
     }
 
     @Override

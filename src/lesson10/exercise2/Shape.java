@@ -1,7 +1,7 @@
 package lesson10.exercise2;
 
 abstract public class Shape {
-    public String color;
+    private String color;
 
     public Shape(String color) {
         this.color = color;
