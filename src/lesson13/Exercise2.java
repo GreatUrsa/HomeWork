@@ -24,6 +24,5 @@ public class Exercise2 {
         sb.delete(6, 8).insert(6, " равно ").delete(24, 25).insert(24, "равно").
                 replace(41, 42, "равно");
         System.out.println(sb);
-
     }
 }
