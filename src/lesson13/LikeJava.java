@@ -9,8 +9,7 @@ package lesson13;
  */
 public class LikeJava {
     public static void main(String[] args) {
-        String str1 = new String();
-        str1 = "I like Java!!!";
+        String str1 = "I like Java!!!";
 
         LikeJava.check(str1);
     }
