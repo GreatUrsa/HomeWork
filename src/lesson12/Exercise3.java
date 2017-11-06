@@ -8,18 +8,18 @@ package lesson12;
  * д) Преобразовать литерал типа double к строке String d = Double.toString(3.14);
  * Сделать то же самое для остальных классов оболочек. Создать отдельный метод для каждого класса оболочки.
  */
-public class exercise3 {
+public class Exercise3 {
     public static void main(String[] args) {
-        ByteDemo();
-        ShortDemo();
-        IntegerDemo();
-        LongDemo();
-        FloatDemo();
-        DoubleDemo();
-        BooleanDemo();
+        byteDemo();
+        shortDemo();
+        integerDemo();
+        longDemo();
+        floatDemo();
+        doubleDemo();
+        booleanDemo();
     }
 
-    public static void ByteDemo() {
+    public static void byteDemo() {
         Byte b1 = Byte.valueOf("127");
         Byte b2 = Byte.valueOf("101011", 2);
         System.out.println(b1 + ", " + b2);
@@ -39,7 +39,7 @@ public class exercise3 {
         System.out.println(b);
     }
 
-    public static void ShortDemo() {
+    public static void shortDemo() {
         Short s1 = Short.valueOf("25");
         Short s2 = Short.valueOf("25", 10);
         System.out.println(s1 + ", " + s2);
@@ -59,7 +59,7 @@ public class exercise3 {
         System.out.println(s);
     }
 
-    public static void IntegerDemo() {
+    public static void integerDemo() {
         Integer i1 = Integer.valueOf(2);
         Integer i2 = Integer.valueOf("25");
         Integer i3 = Integer.valueOf("34", 10);
@@ -80,7 +80,7 @@ public class exercise3 {
         System.out.println(i);
     }
 
-    public static void LongDemo() {
+    public static void longDemo() {
         Long l1 = Long.valueOf(3456L);
         Long l2 = Long.valueOf("345");
         Long l3 = Long.valueOf("123", 10);
@@ -101,7 +101,7 @@ public class exercise3 {
         System.out.println(l);
     }
 
-    public static void FloatDemo() {
+    public static void floatDemo() {
         Float f1 = Float.valueOf(1.23F);
         Float f2 = Float.valueOf("1.32");
         System.out.println(f1 + ", " + f2);
@@ -120,7 +120,7 @@ public class exercise3 {
         System.out.println(f);
     }
 
-    public static void DoubleDemo() {
+    public static void doubleDemo() {
         Double aDouble1 = 2.3;
         Double aDouble2 = new Double("3.14");
 
@@ -147,7 +147,7 @@ public class exercise3 {
         System.out.println(d);
     }
 
-    public static void BooleanDemo() {
+    public static void booleanDemo() {
         Boolean aBoolean = Boolean.valueOf("true");
         Boolean bBoolean = Boolean.valueOf(false);
         System.out.println(aBoolean + ", " + bBoolean);
