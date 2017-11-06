@@ -1,4 +1,4 @@
-package lesson12.exerscise3;
+package lesson12.exerscise2;
 
 /**
  * a) Создать перечисление, содержащее размеры одежды (XXS,XS,S,M,L).

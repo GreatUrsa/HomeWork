@@ -1,7 +1,7 @@
-package lesson12.exerscise3;
+package lesson12.exerscise2;
 
 public class TShirt extends Clothes implements WomensClothing, MensClothing {
-    public TShirt(String size, double price, String color) {
+    public TShirt(ClothingSize size, double price, String color) {
         super(size, price, color);
     }
 

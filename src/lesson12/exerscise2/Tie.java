@@ -1,7 +1,7 @@
-package lesson12.exerscise3;
+package lesson12.exerscise2;
 
 public class Tie extends Clothes implements MensClothing {
-    public Tie(String size, double price, String color) {
+    public Tie(ClothingSize size, double price, String color) {
         super(size, price, color);
     }
 

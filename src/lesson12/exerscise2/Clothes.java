@@ -1,4 +1,4 @@
-package lesson12.exerscise3;
+package lesson12.exerscise2;
 
 /**
  * в) Создать абстрактный класс Одежда, содержащий переменные - размер одежды, стоимость, цвет.
@@ -7,21 +7,21 @@ package lesson12.exerscise3;
  * Галстук (реализует интерфейсы "Мужская Одежда").
  */
 abstract public class Clothes {
-    private String size;
+    private ClothingSize size;
     private double price;
     private String color;
 
-    public Clothes(String size, double price, String color) {
+    public Clothes(ClothingSize size, double price, String color) {
         this.size = size;
         this.price = price;
         this.color = color;
     }
 
-    public String getSize() {
+    public ClothingSize getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(ClothingSize size) {
         this.size = size;
     }
 
