@@ -1,50 +1,43 @@
 package lesson9.exercise3.com.company.professions;
 
-public class Driver {
-    private String name;
-    private int drivingExperience;
+import lesson9.exercise3.com.company.Person;
 
-    public Driver(String name, int drivingExperience) {
-        this.name = name;
-        this.drivingExperience = drivingExperience;
+public class Driver extends Person {
+    private int experience;
+
+    public Driver(String fullName, int age, int experience) {
+        super(fullName, age);
+        this.experience = experience;
     }
 
-    public String getName() {
-        return name;
+    public int getExperience() {
+        return experience;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getDrivingExperience() {
-        return drivingExperience;
-    }
-
-    public void setDrivingExperience(int drivingExperience) {
-        this.drivingExperience = drivingExperience;
+    public void setExperience(int experience) {
+        this.experience = experience;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         Driver driver = (Driver) o;
 
-        if (drivingExperience != driver.drivingExperience) return false;
-        return name != null ? name.equals(driver.name) : driver.name == null;
+        return experience == driver.experience;
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + drivingExperience;
+        int result = super.hashCode();
+        result = 31 * result + experience;
         return result;
     }
 
     @Override
     public String toString() {
-        return "Водитель: " + "имя - " + name + ", водительский стаж - " + drivingExperience + " лет.";
+        return super.toString() + "водительский стаж - " + experience + " лет.";
     }
 }

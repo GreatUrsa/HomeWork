@@ -1,13 +1,20 @@
 package lesson9.exercise3.com.company;
 
-import lesson9.exercise3.com.company.professions.Driver;
-
-public class Person extends Driver {
+public class Person {
+    private String fullName;
     private int age;
 
-    public Person(String name, int drivingExperience, int age) {
-        super(name, drivingExperience);
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
         this.age = age;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getAge() {
@@ -22,24 +29,22 @@ public class Person extends Driver {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
 
         Person person = (Person) o;
 
-        return age == person.age;
+        if (age != person.age) return false;
+        return fullName != null ? fullName.equals(person.fullName) : person.fullName == null;
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
+        int result = fullName != null ? fullName.hashCode() : 0;
         result = 31 * result + age;
         return result;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
-                "age=" + age +
-                "} " + super.toString();
+        return "Водитель: " + fullName + ", возраст - " + age + " лет, ";
     }
 }

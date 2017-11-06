@@ -58,19 +58,19 @@ public class Car {
         this.engine = engine;
     }
 
-    public static void start() {
+    public void start() {
         System.out.println("Поехали");
     }
 
-    public static void stop() {
+    public void stop() {
         System.out.println("Останавливаемся");
     }
 
-    public static void turnRight() {
+    public void turnRight() {
         System.out.println("Поворот направо");
     }
 
-    public static void turnLeft() {
+    public void turnLeft() {
         System.out.println("Поворот налево");
     }
 

@@ -39,6 +39,6 @@ public class Lorry extends Car {
 
     @Override
     public String toString() {
-        return "Грузовик: " + "грузоподъёмность кузова - " + carrying + ", " + super.toString();
+        return super.toString() + " Грузоподъёмность кузова - " + carrying + " кг.";
     }
 }
