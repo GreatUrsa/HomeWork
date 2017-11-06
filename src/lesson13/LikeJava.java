@@ -6,6 +6,10 @@ package lesson13;
  * в) Проверить, заканчивается ли ваша строка подстрокой “!!!”. Используем метод String.endsWith().
  * г) Проверить, начинается ли ваша строка подстрокой “I like”. Используем метод String.startsWith().
  * д) Найти позицию подстроки “Java” в строке “I like Java!!!”.
+ * е) Заменить все символы “а” на “о”.
+ * ж) Преобразуйте строку к верхнему регистру.
+ * з) Преобразуйте строку к нижнему регистру.
+ * и) Вырезать строку Java c помощью метода String.substring.
  */
 public class LikeJava {
     public static void main(String[] args) {
@@ -20,5 +24,6 @@ public class LikeJava {
         System.out.println(str.endsWith("!!!"));
         System.out.println(str.startsWith("I like"));
         System.out.println("indexOf(Java) = " + str.indexOf("Java"));
+        System.out.println(str.substring(7, 11));
     }
 }
