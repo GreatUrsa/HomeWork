@@ -24,6 +24,9 @@ public class LikeJava {
         System.out.println(str.endsWith("!!!"));
         System.out.println(str.startsWith("I like"));
         System.out.println("indexOf(Java) = " + str.indexOf("Java"));
+        System.out.println(str.replace('a', 'o'));
+        System.out.println(str.toUpperCase());
+        System.out.println(str.toLowerCase());
         System.out.println(str.substring(7, 11));
     }
 }
