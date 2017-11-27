@@ -17,7 +17,6 @@ public class HeavyBoxCollection {
         boxes.add(new HeavyBox(18, 23, 34, 45));
         System.out.println(getLightBox(boxes));
         System.out.println(boxes);
-
     }
 
     public static List<HeavyBox> getLightBox(List<HeavyBox> boxes) {
