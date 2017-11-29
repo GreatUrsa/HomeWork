@@ -31,14 +31,15 @@ public class ProductDemo {
                 new Product("tea", 10, 1)
         )));
 
-        printByName(flowers, clothes, drinks);
-        printByPrice(flowers, clothes, drinks);
-        printByRating(flowers, clothes, drinks);
+        printByName(flowers);
+        printByPrice(clothes);
+        printByRating(drinks);
     }
 
     public static void printProducts(Set<Product> sorted, Category... categories) {
         for (Category c : categories) {
             sorted.addAll(c.getProducts());
+            System.out.println(c.getName());
         }
         for (Product product : sorted) {
             System.out.println(product);
@@ -47,19 +48,19 @@ public class ProductDemo {
 
     public static void printByName(Category... categories) {
         SortedSet<Product> byName = new TreeSet<>(new ProductComparatorName());
-        System.out.println("==========sorted by name==========");
+        System.out.println("============sorted by name============");
         printProducts(byName, categories);
     }
 
     public static void printByPrice(Category... categories) {
         SortedSet<Product> byPrice = new TreeSet<>(new ProductComparatorPrice());
-        System.out.println("==========sorted by price==========");
+        System.out.println("============sorted by price===========");
         printProducts(byPrice, categories);
     }
 
     public static void printByRating(Category... categories) {
         SortedSet<Product> byRating = new TreeSet<>(new ProductComparatorRating());
-        System.out.println("==========sorted by rating==========");
+        System.out.println("===========sorted by rating===========");
         printProducts(byRating, categories);
     }
 }
