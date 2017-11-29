@@ -19,7 +19,7 @@ public class Authentication {
 
     public static boolean isCorrect(String login, String password, String confPassword)
             throws WrongLoginException, WrongPasswordException {
-        if (login.length() > 0) {
+        if (login.length() > 20) {
             throw new WrongLoginException("Неправильный логин");
         }
         if (password.length() > 20 || !password.equals(confPassword)) {

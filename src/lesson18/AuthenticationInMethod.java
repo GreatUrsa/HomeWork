@@ -17,7 +17,7 @@ public class AuthenticationInMethod {
 
     public static boolean isCorrect(String login, String password, String confPassword) {
         try {
-            if (login.length() > 0) {
+            if (login.length() > 20) {
                 throw new WrongLoginException("Неправильный логин");
             }
             if (password.length() > 20 || !password.equals(confPassword)) {
