@@ -1,14 +1,14 @@
 package lesson16;
 
 /**
- * Написать класс Калькулятор (необобщенный), который содержит]
+ * Написать класс Калькулятор (необобщенный), который содержит
  * обобщенные статические методы - sum, multiply, divide, subtraction.
  * Параметры этих методов  - два числа разного типа, над которыми должна быть произведена операция.
  */
 public class Calculator {
     public static void main(String[] args) {
-        Integer x = 7;
-        Double y = 12.5;
+        int x = 7;
+        double y = 12.5;
 
         System.out.println("Первое число: " + x);
         System.out.println("Второе число: " + y);
