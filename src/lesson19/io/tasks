@@ -1,0 +1,8 @@
+Урок 19
+Потоки ввода - вывода
+1.Потоки данных
+2.Класс File Классы байтовых потоков – InputStream, OutputStream, FileInputStream, FileOutputStream
+3.Классы символьных потоков – Reader, Writer, FileWriter, FileReader, BufferedWriter, BufferedReader, PrintWriter
+4.Упаковка (wrapping) классов
+5.Предопределенные потоки ввода-вывода
+6.Класс Scanner
