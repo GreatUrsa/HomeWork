@@ -8,6 +8,6 @@ public class NewThreadDemo {
 
         newThread1.start();
         newThread2.start();
-       // newThread3.start();
+        newThread3.start();
     }
 }
