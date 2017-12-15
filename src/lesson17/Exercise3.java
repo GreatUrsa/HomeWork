@@ -25,14 +25,14 @@ public class Exercise3 {
         System.out.println();
     }
 
-    public static Set union(Set<Integer> a, Set<Integer> b) {
-        Set<Integer> newSet = new HashSet<Integer>(a);
+    public static Set<Integer> union(Set<Integer> a, Set<Integer> b) {
+        Set<Integer> newSet = new HashSet<>(a);
         newSet.addAll(b);
         return newSet;
     }
 
-    public static Set intersect(Set<Integer> a, Set<Integer> b) {
-        Set<Integer> newSet = new HashSet<Integer>(a);
+    public static Set<Integer> intersect(Set<Integer> a, Set<Integer> b) {
+        Set<Integer> newSet = new HashSet<>(a);
         newSet.retainAll(b);
         return newSet;
     }
