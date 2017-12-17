@@ -32,9 +32,10 @@ public class FullReport {
 
         DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM);
 
-        for (Employee employee : employees)
+        for (Employee employee : employees) {
             System.out.printf("%-10s    %-25s    %s\n", df.format(employee.getSalaryDate()),
                     employee.getFullName(), nf.format(employee.getSalary()));
+        }
     }
 
     public static void main(String[] args) throws UnsupportedEncodingException {
