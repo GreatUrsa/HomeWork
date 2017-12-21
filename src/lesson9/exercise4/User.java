@@ -1,19 +1,24 @@
 package lesson9.exercise4;
 
 /**
- * Определить класс, хранящий такую информацию о пользователе библиотеки:
- * ФИО, номер читательского билета, факультет, дата рождения, телефон.
- * Методы takeBook(), returnBook().
- * Перегрузить методы takeBook(), returnBook():
- * - takeBook, который будет принимать количество взятых книг.
- * - takeBook, который будет принимать переменное количество названий книг.
- * - takeBook, который будет принимать переменное количество объектов класса Book (создать новый класс).
- * Аналогичным образом перегрузить метод returnBook().
+ * Хранит номер читательского билета и факультет пользователя библиотеки.
+ * Реализует перегруженные методы takeBook() и returnBook(), распечатывающие
+ * информацию о книгах взятых и возвращённых пользователями.
+ *
+ * @author GreatUrsa
+ * @version 1.0
  */
 public class User extends Person {
     private int idCard;
     private int faculty;
 
+    /**
+     * @param fullName ФИО
+     * @param birthday Дата рождения
+     * @param phone    Номер телефона
+     * @param idCard   Номер читательского билета
+     * @param faculty  Факультет
+     */
     public User(String fullName, String birthday, String phone, int idCard, int faculty) {
         super(fullName, birthday, phone);
         this.idCard = idCard;
@@ -36,16 +41,31 @@ public class User extends Person {
         this.faculty = faculty;
     }
 
+    /**
+     * Распечатывает количество  книг, взятых пользователем
+     *
+     * @param number количество взятых книг
+     */
     public void takeBook(int number) {
         System.out.println("Пользователь: " + this.getFullName()
                 + ". Количество взятых книг - " + number);
     }
 
+    /**
+     * Распечатывает количество книг, возвращённых пользователем
+     *
+     * @param number количество возвращённых книг
+     */
     public void returnBook(int number) {
         System.out.println("Пользователь: " + this.getFullName()
                 + ". Количество возвращённых книг - " + number);
     }
 
+    /**
+     * Распечатывает названия книг, взятых пользователем
+     *
+     * @param books названия книг
+     */
     public void takeBook(String... books) {
         System.out.println("Пользователь " + this.getFullName() + " взял:");
         for (String book : books) {
@@ -53,6 +73,11 @@ public class User extends Person {
         }
     }
 
+    /**
+     * Распечатывает названия книг, возвращённых пользователем
+     *
+     * @param books названия книг
+     */
     public void returnBook(String... books) {
         System.out.println("Пользователь " + this.getFullName() + " вернул:");
         for (String book : books) {
@@ -60,6 +85,11 @@ public class User extends Person {
         }
     }
 
+    /**
+     * Распечатывает название и автора книг, взятых пользователем
+     *
+     * @param books объект класса Book
+     */
     public void takeBook(Book... books) {
         System.out.println("Пользователь " + this.getFullName() + " взял: ");
         for (Book book : books) {
@@ -67,6 +97,11 @@ public class User extends Person {
         }
     }
 
+    /**
+     * Распечатывает название и автора книг, возвращённых пользователем
+     *
+     * @param books объект класса Book
+     */
     public void returnBook(Book... books) {
         System.out.println("Пользователь " + this.getFullName() + " вернул: ");
         for (Book book : books) {
