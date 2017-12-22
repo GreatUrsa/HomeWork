@@ -9,15 +9,23 @@ package lesson9.exercise4;
  * @version 1.0
  */
 public class User extends Person {
+    /**
+     * Свойство - номер читательского билета
+     */
     private int idCard;
+    /**
+     * Свойство - факультет
+     */
     private int faculty;
 
     /**
-     * @param fullName ФИО
-     * @param birthday Дата рождения
-     * @param phone    Номер телефона
-     * @param idCard   Номер читательского билета
-     * @param faculty  Факультет
+     * Создаёт новый объект с заданными значениями
+     *
+     * @param fullName - фио
+     * @param birthday - дата рождения
+     * @param phone    - номер телефона
+     * @param idCard   - номер читательского билета
+     * @param faculty  - факультет
      */
     public User(String fullName, String birthday, String phone, int idCard, int faculty) {
         super(fullName, birthday, phone);
